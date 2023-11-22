@@ -82,7 +82,7 @@ struct LGP_Tree : GLDrawer {
   ~LGP_Tree();
 
   //-- methods called in the run loop
-private:
+protected:
   LGP_Node* getBest(LGP_NodeL& fringe, uint level);
   LGP_Node* popBest(LGP_NodeL& fringe, uint level);
   LGP_Node* expandNext(int stopOnLevel=-1, LGP_NodeL* addIfTerminal=nullptr);
