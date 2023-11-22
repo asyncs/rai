@@ -108,12 +108,12 @@ int MAIN(int argc,char **argv){
   rai::initCmdLine(argc, argv);
 //  rnd.clockSeed();
 
-  solve();
-
+//  solve();
+//
 //  testBounds();
 
-//  if(rai::getInteractivity())
-//    playIt();
+  //if(rai::getInteractivity())
+  playIt();
 
   return 0;
 }
