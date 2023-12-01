@@ -444,7 +444,7 @@ bool LGP_Tree::execChoice(String& cmd) {
   else if(cmd=="e") focusNode->expand();
   else if(cmd=="p"){ focusNode->optBound(BD_pose, collisions, verbose-2); focusNode->displayBound(*singleView, BD_pose); }
   else if(cmd=="s"){ focusNode->optBound(BD_seq, collisions, verbose-2); focusNode->displayBound(*singleView, BD_seq); }
-  else if(cmd=="x"){ focusNode->optBound(BD_path, collisions, verbose-2); focusNode->displayBound(*singleView, BD_path); }
+  else if(cmd=="x"){ focusNode->optBound(BD_seqPath, collisions, verbose-2); focusNode->displayBound(*singleView, BD_seqPath); }
   else {
     int choice=-1;
     cmd >>choice;
