@@ -57,7 +57,7 @@ private://draw data
 public:
   String drawText;
   shared_ptr<struct OpenGL> gl;
-  bool drawFrameLines=true;
+  bool drawFrameLines=false;
   double phaseOffset=0., phaseFactor=-1.;
 };
 
