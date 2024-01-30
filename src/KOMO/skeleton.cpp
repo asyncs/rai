@@ -416,6 +416,7 @@ SkeletonTranscription Skeleton::nlp_path(const rai::Configuration& C, const arrA
   uint stepsPerPhase = rai::getParameter<uint>("LGP/stepsPerPhase", 10);
   T.komo = getKomo_path(C, stepsPerPhase, 3e-1, -1e-2, 1e-2);
 
+  T.komo->addObjective({}, FS_scalarProductZZ, {"tray", "kitchen_counter"}, OT_eq, {1e2}, {1});
   if(initWaypoints.N){
     T.komo->initWithWaypoints(initWaypoints, 1, true);
 //    komo->opt.animateOptimization = 2;

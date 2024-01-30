@@ -504,7 +504,7 @@ void LGP_Node::displayBound(ConfigurationViewer& V, BoundType bound) {
     s <<"\n sos:" <<problem(bound).komo->sos <<" eq:" <<problem(bound).komo->eq <<" ineq:" <<problem(bound).komo->ineq;
     V.setConfiguration(tree.kin, s);
     V.setPath(problem(bound).komo->getPath_X(), "", true);
-    const char* path = "/home/asy/git/CA-TAMP/test/pickAndPlace/Videos";
+    const char* path = "/home/asy/git/CA-TAMP/test/serving/Videos";
     if(bound>=BD_path){
       while(V.playVideo(true, 1.*problem(bound).komo->T/problem(bound).komo->stepsPerPhase), path);
     }else{
