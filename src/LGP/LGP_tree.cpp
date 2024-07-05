@@ -143,7 +143,7 @@ LGP_Tree::LGP_Tree(const Configuration& _kin, const char* folFileName) : LGP_Tre
   if(collisions) kin.fcl(); //initialize fcl in root model (SwiftInterface is reference by all child models)
   fol.init(folFileName);
   initFolStateFromKin(fol, kin);
-  if(verbose>1) cout <<"INITIAL LOGIC STATE = " <<*fol.start_state <<endl;
+  // if(verbose>1) cout <<"INITIAL LOGIC STATE = " <<*fol.start_state <<endl;
   root = new LGP_Node(*this, BD_max);
   focusNode = root;
 }
@@ -153,7 +153,7 @@ LGP_Tree::LGP_Tree(const Configuration& _kin, const FOL_World& _fol) : LGP_Tree(
   fol.copy(_fol);
   root = new LGP_Node(*this, BD_max);
   focusNode = root;
-  if(verbose>1) cout <<"INITIAL LOGIC STATE = " <<*root->folState <<endl;
+  // if(verbose>1) cout <<"INITIAL LOGIC STATE = " <<*root->folState <<endl;
 }
 
 LGP_Tree::~LGP_Tree() {
