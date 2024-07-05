@@ -190,7 +190,7 @@ void LGP_Node::optBound(BoundType bound, bool collisions, int verbose) {
   //-- optimize
   try {
     komo->run();
-
+    //TODO: if returns feasible ==0 try rrt
 //    NLP_Solver sol;
 //    sol.setProblem(*problem(bound).nlp);
 //    auto ret = sol.solve();

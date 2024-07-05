@@ -504,6 +504,7 @@ void LGP_Tree::optBestOnLevel(BoundType bound, LGP_NodeL& drawFringe, BoundType 
     try {
       n->optBound(bound, collisions, verbose-2);
     } catch(const char* err) {
+      // TODO: BURAYA BAK RRT INTEGRATION ICIN
       LOG(-1) <<"opt(level=" <<bound <<") has failed for the following node:";
       n->write(cout, false, true);
       LOG(-3) <<"node optimization failed";
