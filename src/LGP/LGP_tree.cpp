@@ -435,8 +435,6 @@ void LGP_Tree::glDraw(OpenGL& gl) {
 }
 
 bool LGP_Tree::execChoice(String& cmd) {
-  cout <<"COMMAND: '" <<cmd <<"'" <<endl;
-
   if(!singleView) singleView = make_shared<ConfigurationViewer>();
 
   if(cmd=="q") return false;

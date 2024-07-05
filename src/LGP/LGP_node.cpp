@@ -497,16 +497,17 @@ void LGP_Node::displayBound(ConfigurationViewer& V, BoundType bound) {
   if(!problem(bound).komo) {
     LOG(-1) <<"bound was not computed - cannot display";
   } else {
-    LOG(0) <<"hit 'q' in the ConfigurationViewer to continue";
+    // LOG(0) <<"hit 'q' in the ConfigurationViewer to continue";
     Enum<BoundType> _bound(bound);
     String s;
     s <<"BOUND " <<_bound <<" at step " <<step <<"\n" <<*skeleton;
     s <<"\n sos:" <<problem(bound).komo->sos <<" eq:" <<problem(bound).komo->eq <<" ineq:" <<problem(bound).komo->ineq;
     V.setConfiguration(tree.kin, s);
     V.setPath(problem(bound).komo->getPath_X(), "", true);
-    const char* path = "/home/asy/git/CA-TAMP/test/serving/Videos";
+    // const char* path = "/home/asy/git/CA-TAMP/test/serving/Videos";
     if(bound>=BD_path){
-      while(V.playVideo(true, 1.*problem(bound).komo->T/problem(bound).komo->stepsPerPhase), path);
+      V.playVideo(true, 1.*problem(bound).komo->T/problem(bound).komo->stepsPerPhase);
+      // while(V.playVideo(true, 1.*problem(bound).komo->T/problem(bound).komo->stepsPerPhase), "");
     }else{
       while(V.playVideo(true, 1.*problem(bound).komo->T));
     }
